@@ -8,20 +8,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+
+    section {
+      background-color: transparent;
+    }
+
+    h1, h2, h3 {
+      color: #58a6ff;
+    }
+
+    a {
+      color: #58a6ff;
+    }
+
+    a:hover {
+      color: #1f6feb;
+      text-shadow: 0 0 5px #1f6feb;
+    }
+
+    .card-glow {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      box-shadow: 0 0 15px rgba(88, 166, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card-glow:hover {
+      box-shadow: 0 0 25px rgba(88, 166, 255, 0.4);
+      transform: scale(1.02);
+    }
+
+    .btn-glow {
+      background-color: #238636;
+      color: white;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-glow:hover {
+      background-color: #2ea043;
+      box-shadow: 0 0 15px #2ea043;
+      transform: scale(1.05);
+    }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-
+<body>
   <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-gradient-to-b from-white to-gray-100">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-600">SANTTOSH MUNIYANDY</span></h1>
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-500">SANTTOSH MUNIYANDY</span></h1>
     <p class="text-lg md:text-xl max-w-xl mb-6">An engineering-minded developer who loves solving complex problems through automation, data, and design.</p>
-    <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 hover:scale-105 shadow-md transition-transform duration-200">View My Work</a>
+    <a href="#projects" class="btn-glow px-6 py-3 rounded-full shadow-md">View My Work</a>
   </section>
 
   <!-- About Me -->
-  <section id="about" class="py-16 px-6 bg-white text-center border-t border-gray-200">
+  <section id="about" class="py-16 px-6 text-center border-t border-gray-800">
     <h2 class="text-3xl font-semibold mb-4">About Me</h2>
     <p class="max-w-2xl mx-auto text-lg leading-relaxed">
       I'm a hands-on engineer with a passion for automation, quality systems, and solving tough real-world problems. At OSRAM, I helped develop high-impact analytics tools that supported yield improvement and defect analysis at scale. My skillset blends software, data, and engineering instincts, enabling me to build fast, smart solutions that drive results.
@@ -65,45 +110,45 @@
   </section>
 
    <!-- Projects -->
-  <section id="projects" class="py-16 px-6 bg-white text-center border-t border-gray-200">
+  <section id="projects" class="py-16 px-6 text-center border-t border-gray-800">
     <h2 class="text-3xl font-semibold mb-6">Projects</h2>
     <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-      <div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up">
-  <h3 class="text-xl font-bold mb-2">Galaxy Classification Using Discriminants</h3>
-  <p class="mb-2">Explores different statistical and machine learning discriminants to classify galaxies, comparing ANN, BDT, Fisher, and Mahalanobis approaches.</p>
-  <p class="text-sm text-gray-600 mb-2">Tech Used: Jupyter, Python, ANN, Scikit-Learn</p>
-  <a href="https://github.com/Santtosh19/Galaxy-Classification-Using-Discriminants" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-</div>
-<div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-  <h3 class="text-xl font-bold mb-2">PyReliabilityPro</h3>
-  <p class="mb-2">Custom Python toolkit for reliability analysis with CI/CD support, designed for early validation and failure pattern insights.</p>
-  <p class="text-sm text-gray-600 mb-2">Tech Used: Python, Pytest, GitHub Actions</p>
-  <a href="https://github.com/Santtosh19/PyReliabilityPro" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-</div>
-<div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
-  <h3 class="text-xl font-bold mb-2">Perovskite Data Platform</h3>
-  <p class="mb-2">Interactive platform for analyzing DFT simulation data of perovskite materials — enabling better visualization and filtering of key properties.</p>
-  <p class="text-sm text-gray-600 mb-2">Tech Used: Jupyter, Python, Matplotlib</p>
-  <a href="https://github.com/Santtosh19/perovskite-data-platform" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-</div>
-<div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
-  <h3 class="text-xl font-bold mb-2">Wildlife Image Classification</h3>
-  <p class="mb-2">Uses pre-trained CNN models like MobileNetV2, ResNet50, and EfficientNetB0 to classify wildlife images by species.</p>
-  <p class="text-sm text-gray-600 mb-2">Tech Used: Python, TensorFlow, Transfer Learning</p>
-  <a href="https://github.com/Santtosh19/Wildlife-Image-Classification-" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-</div>
-<div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="400">
-  <h3 class="text-xl font-bold mb-2">Virtual Serial Data Logger</h3>
-  <p class="mb-2">Lightweight tool for logging and visualizing real-time serial data streams — useful for embedded devices and testing setups.</p>
-  <p class="text-sm text-gray-600 mb-2">Tech Used: Python, Serial, Matplotlib</p>
-  <a href="https://github.com/Santtosh19/Virtual-Serial-Data-Logger" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-</div>
-<div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="500">
-  <h3 class="text-xl font-bold mb-2">Aegis DataOps Pipeline</h3>
-  <p class="mb-2">Streamlined pipeline for handling raw data ingestion, cleaning, and model handoff — built to support ML lifecycle automation.</p>
-  <p class="text-sm text-gray-600 mb-2">Tech Used: Python, CI/CD, Data Engineering</p>
-  <a href="https://github.com/Santtosh19/aegis_dataops_pipeline" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-</div>
+      <div class="card-glow p-6 rounded-xl" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-2">Galaxy Classification Using Discriminants</h3>
+        <p class="mb-2">Explores different statistical and machine learning discriminants to classify galaxies, comparing ANN, BDT, Fisher, and Mahalanobis approaches.</p>
+        <p class="text-sm text-gray-400 mb-2">Tech Used: Jupyter, Python, ANN, Scikit-Learn</p>
+        <a href="https://github.com/Santtosh19/Galaxy-Classification-Using-Discriminants" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card-glow p-6 rounded-xl" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-2">PyReliabilityPro</h3>
+        <p class="mb-2">Custom Python toolkit for reliability analysis with CI/CD support, designed for early validation and failure pattern insights.</p>
+        <p class="text-sm text-gray-400 mb-2">Tech Used: Python, Pytest, GitHub Actions</p>
+        <a href="https://github.com/Santtosh19/PyReliabilityPro" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card-glow p-6 rounded-xl" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-2">Perovskite Data Platform</h3>
+        <p class="mb-2">Interactive platform for analyzing DFT simulation data of perovskite materials — enabling better visualization and filtering of key properties.</p>
+        <p class="text-sm text-gray-400 mb-2">Tech Used: Jupyter, Python, Matplotlib</p>
+        <a href="https://github.com/Santtosh19/perovskite-data-platform" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card-glow p-6 rounded-xl" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-2">Wildlife Image Classification</h3>
+        <p class="mb-2">Uses pre-trained CNN models like MobileNetV2, ResNet50, and EfficientNetB0 to classify wildlife images by species.</p>
+        <p class="text-sm text-gray-400 mb-2">Tech Used: Python, TensorFlow, Transfer Learning</p>
+        <a href="https://github.com/Santtosh19/Wildlife-Image-Classification-" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card-glow p-6 rounded-xl" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-2">Virtual Serial Data Logger</h3>
+        <p class="mb-2">Lightweight tool for logging and visualizing real-time serial data streams — useful for embedded devices and testing setups.</p>
+        <p class="text-sm text-gray-400 mb-2">Tech Used: Python, Serial, Matplotlib</p>
+        <a href="https://github.com/Santtosh19/Virtual-Serial-Data-Logger" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card-glow p-6 rounded-xl" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-2">Aegis DataOps Pipeline</h3>
+        <p class="mb-2">Streamlined pipeline for handling raw data ingestion, cleaning, and model handoff — built to support ML lifecycle automation.</p>
+        <p class="text-sm text-gray-400 mb-2">Tech Used: Python, CI/CD, Data Engineering</p>
+        <a href="https://github.com/Santtosh19/aegis_dataops_pipeline" target="_blank">View on GitHub</a>
+      </div>
     </div>
   </section>
 
@@ -160,7 +205,7 @@
     </div>
   </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
