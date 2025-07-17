@@ -1,85 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aegis DataOps Pipeline | Project Showcase</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SANTTOSH MUNIYANDY | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; }
-    code { background-color: #f3f4f6; padding: 2px 6px; border-radius: 4px; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <section class="py-16 px-6 max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold text-blue-700 mb-4">Aegis: A Resilient, Autonomous DataOps Framework</h1>
-    <p class="text-lg mb-6">Aegis is a professional-grade, end-to-end data engineering project that demonstrates advanced skills in ETL, automation, testing, and observability — all integrated into a resilient pipeline.</p>
+<body class="bg-gray-100 text-gray-800">
 
-    <h2 class="text-2xl font-semibold mt-10 mb-2">Core Problem Solved</h2>
-    <p class="mb-4">It tackles the real-world challenge of turning messy, unreliable telemetry data into clean, trusted analytics-ready output through a fully tested and automated pipeline.</p>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-gradient-to-b from-white to-gray-100">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-600">SANTTOSH MUNIYANDY</span></h1>
+    <p class="text-lg md:text-xl max-w-xl mb-6">An engineering-minded developer who loves solving complex problems through automation, data, and design.</p>
+    <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 hover:scale-105 shadow-md transition-transform duration-200">View My Work</a>
+  </section>
 
-    <h2 class="text-2xl font-semibold mt-10 mb-2">Key Features & Skills Demonstrated</h2>
-    <ul class="list-disc ml-6 space-y-2">
-      <li><strong>Data Engineering:</strong> High-throughput PySpark ETL, 1M+ records</li>
-      <li><strong>Data Quality Gateway:</strong> PySpark-native validation engine to enforce data contracts</li>
-      <li><strong>CI/CD Automation:</strong> GitHub Actions for linting, scanning, and testing</li>
-      <li><strong>Testing & QA:</strong> Unit + property-based testing with Codecov integration</li>
-      <li><strong>Observability:</strong> Structured logs, performance summaries, test matrices</li>
-      <li><strong>Deployment:</strong> Auto-publish to TestPyPI via CD on version tag</li>
-      <li><strong>Professional Tooling:</strong> Ruff, Black, Hydra, Trufflehog, Pre-commit</li>
-    </ul>
+  <!-- About Me -->
+  <section id="about" class="py-16 px-6 bg-white text-center border-t border-gray-200">
+    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+      I'm a hands-on engineer with a passion for automation, quality systems, and solving tough real-world problems. At OSRAM, I helped develop high-impact analytics tools that supported yield improvement and defect analysis at scale. My skillset blends software, data, and engineering instincts, enabling me to build fast, smart solutions that drive results.
+    </p>
+  </section>
 
-    <h2 class="text-2xl font-semibold mt-10 mb-2">How to Run</h2>
-    <p class="mb-4">To run locally, set up with Python 3.9, Java, Hadoop winutils, then:</p>
-    <pre class="bg-gray-100 p-4 rounded text-sm overflow-auto"><code># Clone repo
-$ git clone https://github.com/Santtosh19/aegis_dataops_pipeline.git
-$ cd aegis_dataops_pipeline
-
-# Set Python version and create virtual env
-$ pyenv local 3.9.13
-$ python -m venv venv
-$ source venv/bin/activate  # Windows: .\venv\Scripts\activate
-
-# Install dependencies
-$ pip install ".[dev]"
-
-# Generate raw data
-$ python scripts/generate_data.py
-
-# Run the pipeline
-$ python aegis/pipeline.py
-</code></pre>
-    <p class="mt-4">Result: Clean data lands in <code>data/processed/</code>, and invalid records are quarantined in <code>data/quarantined/</code>.</p>
-
-    <h2 class="text-2xl font-semibold mt-10 mb-2">Using Aegis as a Package</h2>
-    <p class="mb-4">Install from TestPyPI to use core validation logic in your own project:</p>
-    <pre class="bg-gray-100 p-4 rounded text-sm overflow-auto"><code>pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple aegis-framework</code></pre>
-    <p class="mt-4">Example:</p>
-    <pre class="bg-gray-100 p-4 rounded text-sm overflow-auto"><code>from pyspark.sql import SparkSession
-from pyspark.sql.functions import col
-from aegis.pipeline import validate_and_separate_data
-
-spark = SparkSession.builder.getOrCreate()
-sensor_df = spark.read.json("path/to/data.json")
-
-rules = {
-  "missing_id": sensor_df.filter(col("id").isNull()),
-  "invalid_pressure": sensor_df.filter(col("pressure_psi") < 0)
-}
-
-clean_df, quarantined_df = validate_and_separate_data(
-    df=sensor_df,
-    rules=rules
-)</code></pre>
-
-    <h2 class="text-2xl font-semibold mt-10 mb-2">Conclusion</h2>
-    <p>Aegis is not just a coding project — it's a real-world simulation of scalable, trustworthy data pipelines. It highlights how engineering, automation, and quality come together to ensure reliability at every step.</p>
-
-    <div class="mt-10">
-      <a href="https://github.com/Santtosh19/aegis_dataops_pipeline" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">View on GitHub</a>
-      <a href="index.html" class="ml-4 inline-block text-gray-600 underline">Back to Portfolio</a>
+  <!-- Skills -->
+  <section id="skills" class="py-16 px-6 text-center bg-gray-50 border-t border-gray-200">
+    <h2 class="text-3xl font-semibold mb-4">Skills</h2>
+    <div class="grid md:grid-cols-2 gap-6 mt-8 max-w-5xl mx-auto text-left">
+      <div>
+        <h3 class="text-xl font-bold mb-2">Programming & Automation</h3>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li>Python, C++, R, JavaScript, Bash</li>
+          <li>Dashboards, ETL, Automation Scripts</li>
+        </ul>
+        <h3 class="text-xl font-bold mt-6 mb-2">Machine Learning & AI</h3>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li>PyTorch, TensorFlow, Keras, XGBoost</li>
+          <li>Failure Modeling, Evaluation</li>
+        </ul>
+        <h3 class="text-xl font-bold mt-6 mb-2">DevOps & Data Infra</h3>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li>Docker, CI/CD (GitHub Actions)</li>
+          <li>Snowflake, Databricks, PySpark</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-2">Visualization & Analysis</h3>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li>Power BI, Tableau, Excel, Streamlit</li>
+          <li>SPC Charts, Custom Dashboards</li>
+        </ul>
+        <h3 class="text-xl font-bold mt-6 mb-2">Quality & Reliability</h3>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li>FMEA, RCA, HALT/HASS</li>
+          <li>Defect Simulation, SPC, MSA</li>
+        </ul>
+      </div>
     </div>
   </section>
+
+   <!-- Projects -->
+  <section id="projects" class="py-16 px-6 bg-white text-center border-t border-gray-200">
+    <h2 class="text-3xl font-semibold mb-6">Projects</h2>
+    <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+      <div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up">
+  <h3 class="text-xl font-bold mb-2">Galaxy Classification Using Discriminants</h3>
+  <p class="mb-2">Explores different statistical and machine learning discriminants to classify galaxies, comparing ANN, BDT, Fisher, and Mahalanobis approaches.</p>
+  <p class="text-sm text-gray-600 mb-2">Tech Used: Jupyter, Python, ANN, Scikit-Learn</p>
+  <a href="https://github.com/Santtosh19/Galaxy-Classification-Using-Discriminants" target="_blank" class="text-blue-600 underline">View on GitHub</a>
+</div>
+<div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+  <h3 class="text-xl font-bold mb-2">PyReliabilityPro</h3>
+  <p class="mb-2">Custom Python toolkit for reliability analysis with CI/CD support, designed for early validation and failure pattern insights.</p>
+  <p class="text-sm text-gray-600 mb-2">Tech Used: Python, Pytest, GitHub Actions</p>
+  <a href="https://github.com/Santtosh19/PyReliabilityPro" target="_blank" class="text-blue-600 underline">View on GitHub</a>
+</div>
+<div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+  <h3 class="text-xl font-bold mb-2">Perovskite Data Platform</h3>
+  <p class="mb-2">Interactive platform for analyzing DFT simulation data of perovskite materials — enabling better visualization and filtering of key properties.</p>
+  <p class="text-sm text-gray-600 mb-2">Tech Used: Jupyter, Python, Matplotlib</p>
+  <a href="https://github.com/Santtosh19/perovskite-data-platform" target="_blank" class="text-blue-600 underline">View on GitHub</a>
+</div>
+<div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+  <h3 class="text-xl font-bold mb-2">Wildlife Image Classification</h3>
+  <p class="mb-2">Uses pre-trained CNN models like MobileNetV2, ResNet50, and EfficientNetB0 to classify wildlife images by species.</p>
+  <p class="text-sm text-gray-600 mb-2">Tech Used: Python, TensorFlow, Transfer Learning</p>
+  <a href="https://github.com/Santtosh19/Wildlife-Image-Classification-" target="_blank" class="text-blue-600 underline">View on GitHub</a>
+</div>
+<div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="400">
+  <h3 class="text-xl font-bold mb-2">Virtual Serial Data Logger</h3>
+  <p class="mb-2">Lightweight tool for logging and visualizing real-time serial data streams — useful for embedded devices and testing setups.</p>
+  <p class="text-sm text-gray-600 mb-2">Tech Used: Python, Serial, Matplotlib</p>
+  <a href="https://github.com/Santtosh19/Virtual-Serial-Data-Logger" target="_blank" class="text-blue-600 underline">View on GitHub</a>
+</div>
+<div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="500">
+  <h3 class="text-xl font-bold mb-2">Aegis DataOps Pipeline</h3>
+  <p class="mb-2">Streamlined pipeline for handling raw data ingestion, cleaning, and model handoff — built to support ML lifecycle automation.</p>
+  <p class="text-sm text-gray-600 mb-2">Tech Used: Python, CI/CD, Data Engineering</p>
+  <a href="https://github.com/Santtosh19/aegis_dataops_pipeline" target="_blank" class="text-blue-600 underline">View on GitHub</a>
+</div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="py-16 px-6 bg-gray-50 text-center border-t border-gray-200">
+    <h2 class="text-3xl font-semibold mb-6">Certifications & Self-Learning</h2>
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto text-left">
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition" data-aos="fade-up">
+        <h3 class="text-xl font-bold text-blue-600">Six Sigma White Belt</h3>
+        <p class="text-sm text-gray-600">Coursera & OSRAM</p>
+        <p class="mt-2">DMAIC, process improvement & variation reduction in manufacturing.</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-bold text-green-600">Statistical Process Control (SPC)</h3>
+        <p class="text-sm text-gray-600">LinkedIn Learning, OSRAM, YouTube</p>
+        <p class="mt-2">Hands-on with control charts, Cp/Cpk, and real-time monitoring to ensure consistent production quality.</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-bold text-yellow-700">FMEA & Root Cause Analysis</h3>
+        <p class="text-sm text-gray-600">OSRAM, YouTube, Self-study</p>
+        <p class="mt-2">Practiced structured RCA tools like 5 Whys, Fishbone, and Failure Mode ranking to prevent repeat issues.</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-bold text-purple-700">Python for Yield & Quality Analysis</h3>
+        <p class="text-sm text-gray-600">GitHub, YouTube</p>
+        <p class="mt-2">Built defect tracking simulators, KPI dashboards, and automated flows using Python & Pandas.</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="text-xl font-bold text-pink-700">Quality Engineering Toolkit</h3>
+        <p class="text-sm text-gray-600">Self-curated from industry PDFs, articles & open trainings</p>
+        <p class="mt-2">Mastered 8D, CAPA, MSA, and QA tools widely used in high-reliability manufacturing environments.</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition" data-aos="fade-up" data-aos-delay="500">
+        <h3 class="text-xl font-bold text-red-600">Reliability Engineering Essentials</h3>
+        <p class="text-sm text-gray-600">YouTube, ResearchGate</p>
+        <p class="mt-2">Learned MTBF, MTTF, HALT/HASS concepts and applied them to extend product lifetime and reduce failure rates.</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition" data-aos="fade-up" data-aos-delay="600">
+        <h3 class="text-xl font-bold text-indigo-700">Manufacturing Process Control</h3>
+        <p class="text-sm text-gray-600">OSRAM Training, YouTube</p>
+        <p class="mt-2">Studied flow control, quality gates, and how to manage variation throughout production stages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6 text-center bg-gradient-to-b from-gray-50 to-white border-t border-gray-200">
+    <h2 class="text-3xl font-semibold mb-4">Let’s Connect</h2>
+    <p class="mb-6">I'm open to opportunities in QA, Reliability, and Automation roles. Let's talk!</p>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="mailto:santtosh6783@gmail.com" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 hover:scale-105 transition-transform">Email Me</a>
+      <a href="https://www.linkedin.com/in/santtosh-muniyandy-36723322a/" target="_blank" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 hover:scale-105 transition-transform">LinkedIn</a>
+      <a href="resume.pdf" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 hover:scale-105 transition-transform">Download Resume</a>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
