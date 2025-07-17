@@ -5,153 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SANTTOSH MUNIYANDY | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
   <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col items-center justify-center text-center px-4">
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-4 bg-gradient-to-b from-white to-gray-100">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-600">SANTTOSH MUNIYANDY</span></h1>
     <p class="text-lg md:text-xl max-w-xl mb-6">An engineering-minded developer who loves solving complex problems through automation, data, and design.</p>
-    <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">View My Work</a>
+    <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 hover:scale-105 shadow-md transition-transform duration-200">View My Work</a>
   </section>
 
   <!-- About Me -->
-  <section id="about" class="py-16 px-6 bg-white text-center">
+  <section id="about" class="py-16 px-6 bg-white text-center border-t border-gray-200">
     <h2 class="text-3xl font-semibold mb-4">About Me</h2>
     <p class="max-w-2xl mx-auto text-lg leading-relaxed">
-        I'm a hands-on engineer with a passion for automation, quality systems, and solving tough real-world problems. At OSRAM, I helped develop high-impact analytics tools that supported yield improvement and defect analysis at scale. My skillset blends software, data, and engineering instincts — enabling me to build fast, smart solutions that drive results. Whether it's automating root cause investigations, optimizing data pipelines, or visualizing failure trends, I bring both code and curiosity to the table.
+      I'm a hands-on engineer with a passion for automation, quality systems, and solving tough real-world problems. At OSRAM, I helped develop high-impact analytics tools that supported yield improvement and defect analysis at scale. My skillset blends software, data, and engineering instincts — enabling me to build fast, smart solutions that drive results.
     </p>
-
   </section>
 
   <!-- Skills -->
-<section class="py-16 px-6 text-center bg-gray-50">
-  <h2 class="text-3xl font-semibold mb-4">Skills</h2>
-
-  <div class="grid md:grid-cols-2 gap-6 mt-8 max-w-5xl mx-auto text-left">
-
-    <!-- Left Column -->
-    <div>
-      <h3 class="text-xl font-bold mb-2">Programming & Automation</h3>
-      <ul class="list-disc ml-6 space-y-1 text-gray-700">
-        <li>Python (Pandas, NumPy, PyTorch, Scikit-Learn, Matplotlib, Seaborn, OpenCV, Pytest)</li>
-        <li>C++, R, JavaScript, Bash Scripting</li>
-        <li>Automation & Scripting for testing, dashboards, simulations</li>
-      </ul>
-
-      <h3 class="text-xl font-bold mt-6 mb-2">Machine Learning & AI</h3>
-      <ul class="list-disc ml-6 space-y-1 text-gray-700">
-        <li>TensorFlow, Keras, XGBoost, Transfer Learning</li>
-        <li>Failure Prediction Modeling, Model Evaluation</li>
-      </ul>
-
-      <h3 class="text-xl font-bold mt-6 mb-2">Data Engineering & DevOps</h3>
-      <ul class="list-disc ml-6 space-y-1 text-gray-700">
-        <li>PySpark, SQL (MySQL, PostgreSQL, Oracle APEX)</li>
-        <li>Hadoop, Apache Spark, ETL Pipelines</li>
-        <li>Docker, GitHub Actions (CI/CD), Snowflake, Databricks</li>
-      </ul>
-    </div>
-
-    <!-- Right Column -->
-    <div>
-      <h3 class="text-xl font-bold mb-2">Data & Visualization</h3>
-      <ul class="list-disc ml-6 space-y-1 text-gray-700">
-        <li>Microsoft Power BI, Tableau, Excel Pivot Tables</li>
-        <li>Dash, Streamlit, Prometheus, Grafana</li>
-      </ul>
-
-      <h3 class="text-xl font-bold mt-6 mb-2">Quality Engineering & Reliability</h3>
-      <ul class="list-disc ml-6 space-y-1 text-gray-700">
-        <li>Root Cause Analysis (RCA), FMEA, HALT/HASS</li>
-        <li>SPC, Control Charts, Failure Mode Simulation</li>
-      </ul>
-
-      <h3 class="text-xl font-bold mt-6 mb-2">Other Technical Skills</h3>
-      <ul class="list-disc ml-6 space-y-1 text-gray-700">
-        <li>Database Design, Query Optimization</li>
-        <li>Statistical Analysis, Predictive Maintenance Modeling</li>
-        <li>Custom Alerting & Monitoring Systems</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- Projects -->
-<section id="projects" class="py-16 px-6 bg-white text-center">
-  <h2 class="text-3xl font-semibold mb-6">Projects</h2>
-  <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-
-    <!-- Smart Defect Analyzer -->
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-left">
-      <h3 class="text-xl font-bold mb-2">Smart Defect Analyzer</h3>
-      <p class="mb-2">Automated defect trend analysis using Dash + Power BI backend, supporting 60M row datasets with high-speed filtering and engineer-focused insights.</p>
-      <p class="text-sm text-gray-600 mb-2">Tech Used: Python, Dash, Pandas, Parquet, DAX</p>
-      <a href="https://github.com/yourusername/project-link" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-    </div>
-
-    <!-- Galaxy Classification -->
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-left">
-      <h3 class="text-xl font-bold mb-2">Galaxy Classification Using Discriminants</h3>
-      <p class="mb-2">Explores different statistical and machine learning discriminants to classify galaxies, comparing ANN, BDT, Fisher, and Mahalanobis approaches.</p>
-      <p class="text-sm text-gray-600 mb-2">Tech Used: Jupyter, Python, ANN, Scikit-Learn</p>
-      <a href="https://github.com/Santtosh19/Galaxy-Classification-Using-Discriminants" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-    </div>
-
-    <!-- PyReliabilityPro -->
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-left">
-      <h3 class="text-xl font-bold mb-2">PyReliabilityPro</h3>
-      <p class="mb-2">Custom Python toolkit for reliability analysis with CI/CD support, designed for early validation and failure pattern insights.</p>
-      <p class="text-sm text-gray-600 mb-2">Tech Used: Python, Pytest, GitHub Actions</p>
-      <a href="https://github.com/Santtosh19/PyReliabilityPro" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-    </div>
-
-    <!-- Perovskite DFT Analyzer -->
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-left">
-      <h3 class="text-xl font-bold mb-2">Perovskite Data Platform</h3>
-      <p class="mb-2">Interactive platform for analyzing DFT simulation data of perovskite materials — enabling better visualization and filtering of key properties.</p>
-      <p class="text-sm text-gray-600 mb-2">Tech Used: Jupyter, Python, Matplotlib</p>
-      <a href="https://github.com/Santtosh19/perovskite-data-platform" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-    </div>
-
-    <!-- Wildlife Classification -->
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-left">
-      <h3 class="text-xl font-bold mb-2">Wildlife Image Classification</h3>
-      <p class="mb-2">Uses pre-trained CNN models like MobileNetV2, ResNet50, and EfficientNetB0 to classify wildlife images by species.</p>
-      <p class="text-sm text-gray-600 mb-2">Tech Used: Python, TensorFlow, Transfer Learning</p>
-      <a href="https://github.com/Santtosh19/Wildlife-Image-Classification-" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-    </div>
-
-    <!-- Virtual Serial Logger -->
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-left">
-      <h3 class="text-xl font-bold mb-2">Virtual Serial Data Logger</h3>
-      <p class="mb-2">Lightweight tool for logging and visualizing real-time serial data streams — useful for embedded devices and testing setups.</p>
-      <p class="text-sm text-gray-600 mb-2">Tech Used: Python, Serial, Matplotlib</p>
-      <a href="https://github.com/Santtosh19/Virtual-Serial-Data-Logger" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-    </div>
-
-    <!-- DataOps Pipeline -->
-    <div class="bg-gray-100 p-6 rounded-lg shadow-md text-left">
-      <h3 class="text-xl font-bold mb-2">Aegis DataOps Pipeline</h3>
-      <p class="mb-2">Streamlined pipeline for handling raw data ingestion, cleaning, and model handoff — built to support ML lifecycle automation.</p>
-      <p class="text-sm text-gray-600 mb-2">Tech Used: Python, CI/CD, Data Engineering</p>
-      <a href="https://github.com/Santtosh19/aegis_dataops_pipeline" target="_blank" class="text-blue-600 underline">View on GitHub</a>
-    </div>
-
-  </div>
-</section>
-
-  <!-- Resume + Contact -->
-  <section class="py-16 px-6 text-center">
-    <h2 class="text-3xl font-semibold mb-4">Let’s Connect</h2>
-    <p class="mb-6">Interested in working together or have a question? Reach out!</p>
-    <div class="flex justify-center gap-4 flex-wrap">
-      <a href="mailto:your@email.com" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Email Me</a>
-      <a href="https://www.linkedin.com/in/santtosh-muniyandy-36723322a/" target="_blank" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800">LinkedIn</a>
-      <a href="resume.pdf" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Download Resume</a>
+  <section id="skills" class="py-16 px-6 text-center bg-gray-50 border-t border-gray-200">
+    <h2 class="text-3xl font-semibold mb-4">Skills</h2>
+    <div class="grid md:grid-cols-2 gap-6 mt-8 max-w-5xl mx-auto text-left">
+      <div>
+        <h3 class="text-xl font-bold mb-2">Programming & Automation</h3>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li>Python, C++, R, JavaScript, Bash</li>
+          <li>Dashboards, ETL, Automation Scripts</li>
+        </ul>
+        <h3 class="text-xl font-bold mt-6 mb-2">Machine Learning & AI</h3>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li>PyTorch, TensorFlow, Keras, XGBoost</li>
+          <li>Failure Modeling, Evaluation</li>
+        </ul>
+        <h3 class="text-xl font-bold mt-6 mb-2">DevOps & Data Infra</h3>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li>Docker, CI/CD (GitHub Actions)</li>
+          <li>Snowflake, Databricks, PySpark</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-2">Visualization & Analysis</h3>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li>Power BI, Tableau, Excel, Streamlit</li>
+          <li>SPC Charts, Custom Dashboards</li>
+        </ul>
+        <h3 class="text-xl font-bold mt-6 mb-2">Quality & Reliability</h3>
+        <ul class="list-disc ml-6 space-y-1 text-gray-700">
+          <li>FMEA, RCA, HALT/HASS</li>
+          <li>Defect Simulation, SPC, MSA</li>
+        </ul>
+      </div>
     </div>
   </section>
 
+  <!-- Projects -->
+  <section id="projects" class="py-16 px-6 bg-white text-center border-t border-gray-200">
+    <h2 class="text-3xl font-semibold mb-6">Projects</h2>
+    <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+      <!-- Add your project cards here as shown before (use the AOS fade-up card format) -->
+      <!-- Example Card -->
+      <div class="bg-white border p-6 rounded-xl shadow-sm hover:shadow-lg transition" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-2">Smart Defect Analyzer</h3>
+        <p class="mb-2">Dash-powered web app to analyze 60M+ row defect data with instant filtering and engineer-centric insights.</p>
+        <p class="text-sm text-gray-600 mb-2">Python, Dash, DAX, Parquet</p>
+        <a href="#" class="text-blue-600 underline">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="py-16 px-6 bg-gray-50 text-center border-t border-gray-200">
+    <h2 class="text-3xl font-semibold mb-6">Certifications & Self-Learning</h2>
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto text-left">
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition" data-aos="fade-up">
+        <h3 class="text-xl font-bold text-blue-600">Six Sigma White Belt</h3>
+        <p class="text-sm text-gray-600">Coursera & OSRAM</p>
+        <p class="mt-2">DMAIC, process improvement & variation reduction in manufacturing.</p>
+      </div>
+      <!-- Repeat card for other certs -->
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6 text-center bg-gradient-to-b from-gray-50 to-white border-t border-gray-200">
+    <h2 class="text-3xl font-semibold mb-4">Let’s Connect</h2>
+    <p class="mb-6">I'm open to opportunities in QA, Reliability, and Automation roles. Let's talk!</p>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="mailto:santtosh6783@gmail.com" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 hover:scale-105 transition-transform">Email Me</a>
+      <a href="https://www.linkedin.com/in/santtosh-muniyandy-36723322a/" target="_blank" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 hover:scale-105 transition-transform">LinkedIn</a>
+      <a href="resume.pdf" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 hover:scale-105 transition-transform">Download Resume</a>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
