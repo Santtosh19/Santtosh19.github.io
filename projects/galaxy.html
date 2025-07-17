@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galaxy Classification Project | SANTTOSH</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    code { background-color: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.875rem; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <section class="px-6 py-16 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-center mb-6">Galaxy Classification Using Discriminants</h1>
+    <p class="text-center text-gray-600 mb-10 italic">Final Year Thesis | Universiti Sains Malaysia</p>
+
+    <img src="../assets/galaxy_cover.png" alt="Galaxy Project Cover" class="mx-auto mb-8 shadow rounded">
+
+    <p class="mb-4">This project explores the efficiency of various discriminants, including <strong>Artificial Neural Networks (ANN)</strong>, <strong>Boosted Decision Trees (BDT)</strong>, <strong>Fisher</strong>, <strong>Mahalanobis</strong>, <strong>H-Matrix</strong>, and <strong>Linear Discriminants</strong> in classifying stars and galaxies.</p>
+
+    <p class="mb-4">Different variable transformations (none, N, U, G, D, PCA) were applied to evaluate their impact on accuracy. Results showed that ANN and BDT led in performance, while Fisher and Mahalanobis excelled with the U transformation — particularly in distinguishing <em>rounded</em> vs <em>no-bulge</em> galaxies.</p>
+
+    <div class="bg-white p-6 rounded shadow mb-6">
+      <h2 class="text-xl font-semibold mb-2">🔍 Project Structure & Scripts</h2>
+      <ul class="list-disc list-inside text-sm text-gray-700">
+        <li><code>star_galaxy_classification.py</code>: Discriminant-based classification with all transformations (Part A)</li>
+        <li><code>galaxy_classification.py</code>: Focused classifier between rounded/no-bulge galaxies (Part B)</li>
+        <li><code>*.ipynb</code> notebooks: Performance evaluation with metrics + plots</li>
+      </ul>
+    </div>
+
+    <div class="bg-white p-6 rounded shadow mb-6">
+      <h2 class="text-xl font-semibold mb-2">📊 Key Results</h2>
+      <ul class="list-disc list-inside text-sm text-gray-700">
+        <li>ANN achieved highest scores across all metrics — accuracy, precision, F1, and recall</li>
+        <li>With U transformation, Fisher and Mahalanobis achieved 0.991 accuracy (Part A)</li>
+        <li>For rounded vs no-bulge (Part B), U transformation with linear classifiers reached 0.9306 accuracy</li>
+      </ul>
+    </div>
+
+    <div class="bg-white p-6 rounded shadow mb-6">
+      <h2 class="text-xl font-semibold mb-2">📂 Data Source</h2>
+      <ul class="list-disc list-inside text-sm text-gray-700">
+        <li>Part A: <a href="https://github.com/IftachSadeh/ANNZ" class="text-blue-600 underline" target="_blank">ANNZ GitHub Repository</a></li>
+        <li>Part B: SDSS CasJobs — custom SQL query using Galaxy Zoo parameters</li>
+        <li>Used 3 datasets for fair comparison (balanced, unbalanced, weighted)</li>
+      </ul>
+    </div>
+
+    <div class="bg-white p-6 rounded shadow mb-6">
+      <h2 class="text-xl font-semibold mb-2">📜 Thesis & Report</h2>
+      <p class="text-sm text-gray-700">
+        Full write-up and methodology are documented in the thesis:<br>
+        <a href="https://mega.nz/folder/eNsDDJbS#3-ydnHqzrpcH__CrfLcUvQ" class="text-blue-600 underline" target="_blank">Download Galaxy Classification Thesis (PDF)</a>
+      </p>
+    </div>
+
+    <div class="bg-white p-6 rounded shadow mb-6">
+      <h2 class="text-xl font-semibold mb-2">👨‍💻 GitHub & Code</h2>
+      <p class="text-sm text-gray-700">
+        This project is adapted and extended from Iftach Sadeh’s ANNZ repo.<br>
+        You can find the code for all discriminants and transformations here:<br>
+        <a href="https://github.com/Santtosh19/Galaxy-Classification-Using-Discriminants" target="_blank" class="text-blue-600 underline">View Project on GitHub</a>
+      </p>
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="../index.html#projects" class="text-blue-600 underline">⬅ Back to Portfolio</a>
+    </div>
+  </section>
+
+</body>
+</html>

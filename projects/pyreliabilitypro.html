@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PyReliabilityPro | Project Showcase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    pre { background-color: #f3f4f6; padding: 1rem; overflow-x: auto; border-radius: 0.5rem; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <section class="py-16 px-6 text-center bg-white">
+    <h1 class="text-4xl font-bold mb-2">PyReliabilityPro</h1>
+    <p class="text-lg text-gray-600">A Python Toolkit for Modern Reliability Analysis</p>
+    <p class="max-w-3xl mx-auto mt-6 text-lg">A lightweight open-source toolkit designed for engineers and analysts to conduct statistical reliability calculations, built with test-driven development and CI/CD automation.</p>
+    <div class="mt-8">
+      <a href="https://github.com/Santtosh19/PyReliabilityPro" target="_blank" class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700">View on GitHub</a>
+    </div>
+  </section>
+
+  <section class="py-12 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-left">
+      <h2 class="text-2xl font-semibold mb-4">Key Features</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li><strong>Weibull Analysis:</strong> Estimate parameters, compute CDF, PDF, SF, and HF with real failure data.</li>
+        <li><strong>MTTF Calculations:</strong> Both theoretical and sample-based for exponential & Weibull distributions.</li>
+        <li><strong>CI/CD:</strong> Fully automated pipeline using GitHub Actions (lint, format, test, codecov upload).</li>
+        <li><strong>95%+ Test Coverage:</strong> Pytest-powered, tested against multiple Python versions.</li>
+        <li><strong>Quality Assurance:</strong> Integrated flake8, black, and mypy checks on every commit.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="py-12 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">Example Usage</h2>
+      <pre><code>import pyreliabilitypro as rel
+
+failure_times = [105, 120, 135, 160, 175, 190, 210, 230, 255, 280]
+beta, eta, _ = rel.weibull_fit(failure_times)
+
+print(f"MTTF: {rel.weibull_mttf(beta, eta):.2f} hours")
+print(f"Failure Probability @150h: {rel.weibull_cdf(150, beta, eta):.2%}")
+print(f"Hazard Rate @150h: {rel.weibull_hf(150, beta, eta):.4f}")</code></pre>
+    </div>
+  </section>
+
+  <section class="py-12 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-left">
+      <h2 class="text-2xl font-semibold mb-4">Note</h2>
+      <p class="text-lg">This project is designed for terminal or programmatic usage and does not include a graphical UI. Screenshots are not applicable for this type of engineering package.</p>
+    </div>
+  </section>
+
+  <section class="py-8 px-6 text-center">
+    <a href="../index.html" class="text-blue-600 underline">← Back to Portfolio</a>
+  </section>
+</body>
+</html>

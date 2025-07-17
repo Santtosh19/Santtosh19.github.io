@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis DataOps Pipeline | Project Showcase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    code { background-color: #f3f4f6; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <section class="py-16 px-6 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-blue-700 mb-4">Aegis: A Resilient, Autonomous DataOps Framework</h1>
+    <p class="text-lg mb-6">Aegis is a professional-grade, end-to-end data engineering project that demonstrates advanced skills in ETL, automation, testing, and observability — all integrated into a resilient pipeline.</p>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-2">Core Problem Solved</h2>
+    <p class="mb-4">It tackles the real-world challenge of turning messy, unreliable telemetry data into clean, trusted analytics-ready output through a fully tested and automated pipeline.</p>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-2">Key Features & Skills Demonstrated</h2>
+    <ul class="list-disc ml-6 space-y-2">
+      <li><strong>Data Engineering:</strong> High-throughput PySpark ETL, 1M+ records</li>
+      <li><strong>Data Quality Gateway:</strong> PySpark-native validation engine to enforce data contracts</li>
+      <li><strong>CI/CD Automation:</strong> GitHub Actions for linting, scanning, and testing</li>
+      <li><strong>Testing & QA:</strong> Unit + property-based testing with Codecov integration</li>
+      <li><strong>Observability:</strong> Structured logs, performance summaries, test matrices</li>
+      <li><strong>Deployment:</strong> Auto-publish to TestPyPI via CD on version tag</li>
+      <li><strong>Professional Tooling:</strong> Ruff, Black, Hydra, Trufflehog, Pre-commit</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-2">How to Run</h2>
+    <p class="mb-4">To run locally, set up with Python 3.9, Java, Hadoop winutils, then:</p>
+    <pre class="bg-gray-100 p-4 rounded text-sm overflow-auto"><code># Clone repo
+$ git clone https://github.com/Santtosh19/aegis_dataops_pipeline.git
+$ cd aegis_dataops_pipeline
+
+# Set Python version and create virtual env
+$ pyenv local 3.9.13
+$ python -m venv venv
+$ source venv/bin/activate  # Windows: .\venv\Scripts\activate
+
+# Install dependencies
+$ pip install ".[dev]"
+
+# Generate raw data
+$ python scripts/generate_data.py
+
+# Run the pipeline
+$ python aegis/pipeline.py
+</code></pre>
+    <p class="mt-4">Result: Clean data lands in <code>data/processed/</code>, and invalid records are quarantined in <code>data/quarantined/</code>.</p>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-2">Using Aegis as a Package</h2>
+    <p class="mb-4">Install from TestPyPI to use core validation logic in your own project:</p>
+    <pre class="bg-gray-100 p-4 rounded text-sm overflow-auto"><code>pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple aegis-framework</code></pre>
+    <p class="mt-4">Example:</p>
+    <pre class="bg-gray-100 p-4 rounded text-sm overflow-auto"><code>from pyspark.sql import SparkSession
+from pyspark.sql.functions import col
+from aegis.pipeline import validate_and_separate_data
+
+spark = SparkSession.builder.getOrCreate()
+sensor_df = spark.read.json("path/to/data.json")
+
+rules = {
+  "missing_id": sensor_df.filter(col("id").isNull()),
+  "invalid_pressure": sensor_df.filter(col("pressure_psi") < 0)
+}
+
+clean_df, quarantined_df = validate_and_separate_data(
+    df=sensor_df,
+    rules=rules
+)</code></pre>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-2">Conclusion</h2>
+    <p>Aegis is not just a coding project — it's a real-world simulation of scalable, trustworthy data pipelines. It highlights how engineering, automation, and quality come together to ensure reliability at every step.</p>
+
+    <div class="mt-10">
+      <a href="https://github.com/Santtosh19/aegis_dataops_pipeline" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">View on GitHub</a>
+      <a href="index.html" class="ml-4 inline-block text-gray-600 underline">Back to Portfolio</a>
+    </div>
+  </section>
+</body>
+</html>
